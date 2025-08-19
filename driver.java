@@ -58,7 +58,7 @@ public class driver
         {
             if(book.getUserRating() == rating)
             {
-                System.out.println(book.getName());
+                System.out.println(book.getTitle());
             }
         }
     }
@@ -69,9 +69,9 @@ public class driver
         if (author != null) 
         {
             System.out.println("Books by " + authorName + " with their prices:");
-            for(Integer price : author.priceOfBooks())
+            for(Book book : author.getBooks())
             {
-                System.out.println(price);
+                System.out.println(book.getTitle() + " " + book.getPrice());
             }
         }
         else

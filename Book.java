@@ -1,6 +1,6 @@
 public class Book 
 {
-    private String name;
+    private String title;
     private Author author;
     private double userRating;
     private int reviews;
@@ -8,9 +8,9 @@ public class Book
     private int year;
     private String genre;
 
-    public Book(String name, Author author, double userRating, int reviews, int price, int year, String genre) 
+    public Book(String title, Author author, double userRating, int reviews, int price, int year, String genre) 
     {
-        this.name = name;
+        this.title = title;
         this.author = author;
         this.userRating = userRating;
         this.reviews = reviews;
@@ -19,8 +19,8 @@ public class Book
         this.genre = genre;
     }
     
-    public String getName() { return name; }
-    public void setName(String name) { this.name = name; }
+    public String getTitle() { return title; }
+    public void setTitle(String title) { this.title = title; }
 
     public Author getAuthor() { return author; }
     public void setAuthor(Author author) { this.author = author; }
@@ -39,4 +39,16 @@ public class Book
     
     public String getGenre() { return genre; }
     public void setGenre(String genre) { this.genre = genre; }
+
+    public void printDetails()
+    {
+        System.out.println("Book Title: " + title);
+        System.out.println("Author: " + author.getName());
+        System.out.println("User Rating: " + userRating);
+        System.out.println("Reviews: " + reviews);
+        System.out.println("Price: " + price);
+        System.out.println("Year: " + year);
+        System.out.println("Genre: " + genre);
+        System.out.println("-----------------------------");
+    }
 }

@@ -21,22 +21,12 @@ public class Author
 
     public int getBookCount() { return books.size(); }
 
-    public List<Integer> priceOfBooks() 
-    {
-        List<Integer> prices = new ArrayList<>();
-        for (Book book : books) 
-        {
-            prices.add(book.getPrice());
-        }
-        return prices;
-    }
-
     public List<String> getBookNames() 
     {
         List<String> names = new ArrayList<>();
         for (Book book : books) 
         {
-            names.add(book.getName());
+            names.add(book.getTitle());
         }
         return names;
     }

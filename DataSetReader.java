@@ -19,7 +19,7 @@ public class DataSetReader extends Reader
             while ((line = br.readLine()) != null) 
             {
                 String[] values = line.split(",");
-                String name = values[0].trim();
+                String title = values[0].trim();
                 String author = values[1].trim();
                 double userRating = Double.parseDouble(values[2].trim());
                 int reviews = Integer.parseInt(values[3].trim());
@@ -27,7 +27,7 @@ public class DataSetReader extends Reader
                 int year = Integer.parseInt(values[5].trim());
                 String genre = values[6].trim();
                 Author authorObj = authors.getOrDefault(author, new Author(author));
-                Book book = new Book(name, authorObj, userRating, reviews, price, year, genre);
+                Book book = new Book(title, authorObj, userRating, reviews, price, year, genre);
                 books.add(book);
                 authorObj.addBook(book);
                 authors.put(author, authorObj);
