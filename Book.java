@@ -1,14 +1,14 @@
 public class Book 
 {
     private String name;
-    private String author;
+    private Author author;
     private double userRating;
     private int reviews;
     private int price;
     private int year;
     private String genre;
-    
-    public Book(String name, String author, double userRating, int reviews, int price, int year, String genre) 
+
+    public Book(String name, Author author, double userRating, int reviews, int price, int year, String genre) 
     {
         this.name = name;
         this.author = author;
@@ -21,10 +21,10 @@ public class Book
     
     public String getName() { return name; }
     public void setName(String name) { this.name = name; }
-    
-    public String getAuthor() { return author; }
-    public void setAuthor(String author) { this.author = author; }
-    
+
+    public Author getAuthor() { return author; }
+    public void setAuthor(Author author) { this.author = author; }
+
     public double getUserRating() { return userRating; }
     public void setUserRating(double userRating) { this.userRating = userRating; }
     

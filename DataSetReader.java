@@ -26,12 +26,11 @@ public class DataSetReader extends Reader
                 int price = Integer.parseInt(values[4].trim());
                 int year = Integer.parseInt(values[5].trim());
                 String genre = values[6].trim();
-                
-                Book book = new Book(name, author, userRating, reviews, price, year, genre);
+                Author authorObj = authors.getOrDefault(author, new Author(author));
+                Book book = new Book(name, authorObj, userRating, reviews, price, year, genre);
                 books.add(book);
-                
-                if(!authors.containsKey(author)) authors.put(author, new Author(author));
-                authors.get(author).addBook(book);
+                authorObj.addBook(book);
+                authors.put(author, authorObj);
             }
         }
         catch (IOException e)
