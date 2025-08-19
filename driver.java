@@ -3,14 +3,23 @@ import java.util.List;
 
 public class driver 
 {
-    HashMap<String, Author> authors;
-    List<Book> books;
+    private HashMap<String, Author> authors;
+    private List<Book> books;
     public driver()
     {
         Reader reader = new DataSetReader();
         ReaderReturnType data = reader.readBooks();
-        this.authors = data.authors;
-        this.books = data.books;
+        this.authors = data.getAuthors();
+        this.books = data.getBooks();
+    }
+
+    // Getter methods for private fields
+    public HashMap<String, Author> getAuthors() {
+        return authors;
+    }
+    
+    public List<Book> getBooks() {
+        return books;
     }
 
     public void totalBooksByAuthor(String authorName)

@@ -28,10 +28,10 @@ public class Main
         System.out.println();
         
         System.out.println("6. Sample book details:");
-        if (!bookDriver.books.isEmpty()) {
-            bookDriver.books.get(0).printDetails();
-            if (bookDriver.books.size() > 1) {
-                bookDriver.books.get(1).printDetails();
+        if (!bookDriver.getBooks().isEmpty()) {
+            bookDriver.getBooks().get(0).printDetails();
+            if (bookDriver.getBooks().size() > 1) {
+                bookDriver.getBooks().get(1).printDetails();
             }
         }
         
